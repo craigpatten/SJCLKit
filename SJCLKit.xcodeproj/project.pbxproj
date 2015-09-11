@@ -10,6 +10,8 @@
 		1FAB9CA71BA3382400225900 /* SJCLKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FAB9CA61BA3382400225900 /* SJCLKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1FAB9CAE1BA3382500225900 /* SJCLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FAB9CA31BA3382400225900 /* SJCLKit.framework */; settings = {ASSET_TAGS = (); }; };
 		1FAB9CB31BA3382500225900 /* SJCLKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAB9CB21BA3382500225900 /* SJCLKitTests.swift */; };
+		1FAB9CBE1BA3384700225900 /* SJCLKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAB9CBD1BA3384700225900 /* SJCLKit.swift */; settings = {ASSET_TAGS = (); }; };
+		1FAB9CC01BA33B8300225900 /* sjcl.js in Resources */ = {isa = PBXBuildFile; fileRef = 1FAB9CBF1BA33B8300225900 /* sjcl.js */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,8 @@
 		1FAB9CAD1BA3382500225900 /* SJCLKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SJCLKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FAB9CB21BA3382500225900 /* SJCLKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SJCLKitTests.swift; sourceTree = "<group>"; };
 		1FAB9CB41BA3382500225900 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1FAB9CBD1BA3384700225900 /* SJCLKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJCLKit.swift; sourceTree = "<group>"; };
+		1FAB9CBF1BA33B8300225900 /* sjcl.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = sjcl.js; path = js/sjcl.js; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,8 +75,10 @@
 		1FAB9CA51BA3382400225900 /* SJCLKit */ = {
 			isa = PBXGroup;
 			children = (
+				1FAB9CBF1BA33B8300225900 /* sjcl.js */,
 				1FAB9CA61BA3382400225900 /* SJCLKit.h */,
 				1FAB9CA81BA3382400225900 /* Info.plist */,
+				1FAB9CBD1BA3384700225900 /* SJCLKit.swift */,
 			);
 			path = SJCLKit;
 			sourceTree = "<group>";
@@ -142,6 +148,7 @@
 		1FAB9C9A1BA3382400225900 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = Moondust;
 				TargetAttributes = {
@@ -176,6 +183,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FAB9CC01BA33B8300225900 /* sjcl.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,6 +201,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FAB9CBE1BA3384700225900 /* SJCLKit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,6 +316,7 @@
 		1FAB9CB81BA3382500225900 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -317,12 +327,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = moondust.SJCLKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		1FAB9CB91BA3382500225900 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
